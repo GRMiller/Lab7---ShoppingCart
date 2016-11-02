@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<body>
+
+
+
+<!--USING CONCAT METHOD TO CONCATENATE ARRAYS INTO NEW ARRAY--> 
+
+<script>
+var awesomeSauce = ["awesome", "sauce", "opposum", "paws"];
+var totallyTubular = ["cowabunga"];
+var sayWhaaaa = ["jabroni", "upDawgOnYourFace"]
+var newString = awesomeSauce.concat(totallyTubular, sayWhaaaa);
+</script>
+
+<script>
+
+var threeColors = ["red", "orange", "yellow"];
+var threeMoreColors =["blue", "violet", "purple"];
+var rainbow = threeColors.concat(threeMoreColors);
+
+
+for (var i=0; i<rainbow.length; i++) {
+	//console.log(i);
+	console.log(rainbow[i]);
+}
+
+console.log("NEXT STEP")
+
+rainbow.forEach(function(color){     //Uses a function, assigns each value in array a variable name of color
+	console.log(color);	 
+});
+
+
+</script>
+
+
+
+
+
+
+<!--LIST JUST NAMES OF FAMILY MEMBERS USING 3 DIFFERENT PROCESSES-->
+
+<script>
+console.log('NEEEEW PROJECT:')
+
+	var myInfo = {
+	  name:'James',
+	  age:36,
+	  married:true,
+	  likes: ['Mythbusters', 'Jim Butcher', 'JavaScript'],
+	  family: [
+	    {
+	      name: "Rebecca",
+	      relation:"spouse"
+	    },
+	    {
+	      name: "Evangeline",
+	      relation: "daughter"
+	    },
+	    {
+	      name: "Josephine",
+	      relation:"daughter"
+	    },
+	  ],
+	  listFamilyMembers: function () {
+	  		for (var i = 0; i < this.family.length; i++) {
+	  			console.log(this.family[i].name);
+	  		}	 		
+	  		return;
+		}
+
+	};
+	
+	console.log(myInfo.listFamilyMembers());
+
+	console.log('NEXT STEP');
+
+	for (var i = 0; i < myInfo.family.length; i++){
+	  console.log(myInfo.family[i].name);
+	};
+
+	console.log('NEXT STEP');
+
+	myInfo.family.forEach(function(familyMembers){ 
+		console.log(familyMembers.name);
+	});
+
+</script>
+
+
+<!--FIGURE IT OUT PROJECT FROM SLIDES-->
+
+<script>
+console.log("NEEEEEW PROJECT")
+
+function makeArray(int1, int2) {
+	var array = [];
+	if (int1 > int2) {
+		for (var i = int1; i >= int2; i--) {
+			array.push(i);
+		} 
+		console.log(array);
+	} else if(int1 < int2) {
+		for (var i = int1; i <= int2; i++) {
+			array.push(i);
+		}
+		console.log(array);
+	}
+};
+
+
+makeArray (4,9);
+// console.log(array);
+
+makeArray (10,3);
+// console.log(array);
+makeArray (-10,3);
+// console.log(array);
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Lab 7 | Grocery Shopping</title>
+
+	<meta name="description" content="A workable Grocery Shopping page"/>
+	<meta http-equiv="author" content="Garrett R. Miller"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content ="width=device-width, initial-scale=1"/>
+
+	<!-- INSERT: JQUERY, BOOTSTRAP OR FLEXBOX SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	
+
+	<!--INSERT FONTS-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<!-- INSERT CSS -->
+	<link href="css/reset.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mainstyles.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+	
+	<div class="col-md-12 grocery_shopping">
+		<h1>Grocery Shopping</h1>
+	</div>
+
+
+
+
+<!--BEGIN ROW 1-->
+	<div class="row">
+
+		<!--APPLES-->
+		<div class="col-md-3 product_item"> 
+			<h3>Apples</h3>
+			<img src="images/apple.png" alt="Red Delicious Apple" title="Red Delicious Apple" class="img-responsive" id="apple_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Apple', 1.05, 1)">Add to Cart</button>
+		</div>
+
+		<!--AVOCADOS-->
+		<div class="col-md-3 product_item"> 
+			<h3>Avocados</h3>
+			<img src="images/avocado.png" alt="An Avocado" title="MMMmmm, Avocados" class="img-responsive" id="avocado_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Avocado', 1.33, 1)">Add to Cart</button>
+		</div>
+
+		<!--BROCCOLI-->
+		<div class="col-md-3 product_item"> 
+			<h3>Broccoli</h3>
+			<img src="images/broccoli.png" alt="A head of Broccoli" title="Broccoli" class="img-responsive" id="broccoli_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Broccoli', 1.80, 1)">Add to Cart</button>
+		</div>
+
+		<!--TOMATO-->
+		<div class="col-md-3 product_item">
+			<h3>Tomatoes</h3>
+			<img src="images/tomato.png" alt="Tomato" title="Tomato" class="img-responsive" id="tomato_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Tomato', 1.00, 1)">Add to Cart</button>
+		</div>
+	</div>
+<!--END ROW 1-->
+
+
+
+
+<!--BEGIN ROW 2-->
+	<div class="row">
+	<!--POTATOES-->
+		<div class="col-md-3 product_item"> 
+			<h3>Red Potatoes</h3>
+			<img src="images/red_potato.png" alt="Red Potatoes" title="Red Potatoes" class="img-responsive" id="red_potato_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Red Potato', 0.45, 1)">Add to Cart</button>
+		</div>
+
+		<!--ONION-->
+		<div class="col-md-3 product_item"> 
+			<h3>Red Onion</h3>
+			<img src="images/red_onion.png" alt="A Red Onion" title="Red Onion" class="img-responsive" id="red_onion_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Red Onion', 0.35 , 1)">Add to Cart</button>
+		</div>
+
+		<!--BROCCOLI-->
+		<div class="col-md-3 product_item"> 
+			<h3>Orange</h3>
+			<img src="images/orange.png" alt="An orange" title="Orange" class="img-responsive" id="orange_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Orange', 1.75, 1)">Add to Cart</button>
+		</div>
+
+		<!--TOMATO-->
+		<div class="col-md-3 product_item">
+			<h3>Bread Loaf</h3>
+			<img src="images/bread.png" alt="Loaf of Bread" title="Loaf of Bread" class="img-responsive" id="bread_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bread Loaf', 3.99, 1)">Add to Cart</button>
+		</div>
+	</div>
+<!--END ROW 2-->
+
+
+
+<!--BEGIN ROW 3-->
+	<div class="row">
+		<!--PITA BREAD-->
+		<div class="col-md-3 product_item">
+			<h3>Pita Bread</h3>
+			<img src="images/pita_bread.png" alt="Pita Bread" title="Pita Bread" class="img-responsive" id="pita_bread_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Pita Bread', 4.99, 1)">Add to Cart</button>
+		</div>
+
+		<!--MILK-->
+		<div class="col-md-3 product_item"> 
+			<h3>Gallon of Milk</h3>
+			<img src="images/milk.png" alt="Milk" title="Milk" class="img-responsive" id="milk_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Milk', 2.50, 1)">Add to Cart</button>
+		</div>
+
+		<!--EGGS-->
+		<div class="col-md-3 product_item"> 
+			<h3>A Dozen Eggs</h3>
+			<img src="images/egg_carton.png" alt="Carton of Eggs" title="Carton of Eggs" class="img-responsive" id="egg_carton_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Carton of Eggs', 1.99 , 1)">Add to Cart</button>
+		</div>
+
+		<!--BACON-->
+		<div class="col-md-3 product_item"> 
+			<h3>Bacon</h3>
+			<img src="images/bacon.png" alt="Bacon" title="Bacon" class="img-responsive" id="bacon_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bacon', 4.99, 1)">Add to Cart</button>
+		</div>
+	</div>
+<!--END ROW 3-->
+
+
+
+
+<!--BEGIN ROW 4-->
+	<div class="row">
+		<!--PITA BREAD-->
+		<div class="col-md-3 product_item">
+			<h3>6 pack of Beer</h3>
+			<img src="images/beer_6pack.png" alt="6 pack of Beer" title="6 pack of Beer" class="img-responsive" id="beer_6pack_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('6 pack of Beer', 7.99, 1)">Add to Cart</button>
+		</div>
+
+		<!--BEER KEG-->
+		<div class="col-md-3 product_item"> 
+			<h3>Keg of Beer</h3>
+			<img src="images/beer_keg.png" alt="Beer Keg" title="Beer Keg" class="img-responsive" id="beer_keg_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Keg of Beer', 45, 1)">Add to Cart</button>
+		</div>
+
+		<!--RED RED WII-III-IINE-->
+		<div class="col-md-3 product_item"> 
+			<h3>Bottle of Red Wine</h3>
+			<img src="images/wine.png" alt="Bottle of Red Wine" title="Bottle of Red Wine" class="img-responsive" id="wine_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bottle of Red Wine', 11.99 , 1)">Add to Cart</button>
+		</div>
+
+		<!--BULLEIT BOURBON-->
+		<div class="col-md-3 product_item"> 
+			<h3>Bulleit Rye Bourbon</h3>
+			<img src="images/bulleit_rye.png" alt="Fifth of Bulleit Rye Bourbon" title="Fifth of Bulleit Rye Bourbon" class="img-responsive" id="bulleit_rye_img" />
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bulleit Rye Bourbon', 24.99, 1)">Add to Cart</button>
+		</div>
+	</div>
+<!--END ROW 4-->
+
+
+
+<!--BEGIN ROW 5-->
+	<!--SHOW CART & TOTAL CART-->
+	<div class="row show_and_total">
+		<div class="col-md-6 show_cart_button">
+			<button type="button" class="btn btn-primary showCart" onclick="showCart(cart)">Show Items in Your Cart</button>
+		</div>
+
+		<div class="col-md-6 show_cart_button">
+			<button type="button" class="btn btn-primary showCart" onclick="totalCart(cart)">Total Items in Your Cart</button>
+		</div>
+
+	</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="js/shoppingCart.js">
+
+		
+	</script>
+
+
+
+
+</body>
+</html>

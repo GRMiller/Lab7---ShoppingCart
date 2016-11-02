@@ -1,0 +1,59 @@
+
+
+	/*MAINSTYLES OF LAB7 AND GROCERY SHOPPING*/
+
+
+
+
+
+
+/*IMPORT NECESSARY FEATURES*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+/*BEGIN BODY*/
+
+body {
+	width:100%;
+	max-height:250px !important;
+	min-height:250px !important;
+	font-family: Montserrat, sans-serif;
+	text-align:center;
+}
+
+h1 {
+	font-size:3em;
+	margin:15px auto;
+	margin-bottom:30px;
+}
+
+.product_item {
+	padding: 5px 15px;
+}
+
+.product_item:hover {
+	padding:5px 0px;
+	box-shadow: 12px 0 15px -4px rgba(80, 81, 81, 0.8), 
+				-12px 0 8px -4px rgba(80, 81, 81, 0.8),
+				0 9px 0px 0px white, 
+				0 -9px 0px 0px white; 
+				
+}
+
+.product_item img {
+	width:60%;
+	margin:0px auto;
+}
+
+h3 {
+	margin:0px auto;
+	margin-bottom:20px;
+}
+
+button {margin:20px auto;
+}
+
+.show_and_total {
+	padding:75px auto;
+}
