@@ -174,15 +174,13 @@
 
 
 <!--BEGIN ROW 5-->
-	<!--SHOW CART & TOTAL CART-->
 	<div class="row show_and_total">
-		<div class="col-md-6 show_cart_button">
-			<button type="button" class="btn btn-primary showCart" onclick="showCart(cart)">Show Items in Your Cart</button>
+		<!--SHOW CART & TOTAL CART-->
+		<div class="col-md-12 show_cart_button">
+			<button type="button" class="btn btn-primary showCart" onclick="showCart(cart), totalCart(cart)">Show Items & Cost</button>
 		</div>
 
-		<div class="col-md-6 show_cart_button">
-			<button type="button" class="btn btn-primary showCart" onclick="totalCart(cart)">Total Items in Your Cart</button>
-		</div>
+	
 
 	</div>
 
