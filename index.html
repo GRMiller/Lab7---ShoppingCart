@@ -31,7 +31,46 @@
 		<h1>Grocery Shopping</h1>
 	</div>
 
+<!--BEGIN ROW 5-->
+	<div class="row">
+		<!--TABLE FOR ITEMS IN CART-->
+		<table id="cart_table">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Qty</th>
+				</tr>
+			</thead>
+			<tbody>
+			 <!--INSERT DATA FROM ADD TO CART FUNCTION-->
+			</tbody>
+			<tfoot>
+				<tr>
+					<th colspan="2">Subtotal: </th>
+					<td></td>
+				</tr>
+				<tr>
+					<th colspan="2">Tax: </th>
+					<td></td>
+				</tr>
+				<tr>
+					<th colspan="2">Total: </th>
+					<td id="total_cell"></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+<!--END ROW 5-->
 
+<!--BEGIN ROW 6-->
+	
+	<div class="row show_and_total">
+		<!--SHOW CART & TOTAL CART-->
+		<div class="col-md-12 show_cart_button">
+			<button type="button" class="btn btn-primary showCart" onclick="totalCart(cart)">Total Items' Cost</button>
+		</div>
+	</div>
 
 
 <!--BEGIN ROW 1-->
@@ -173,46 +212,7 @@
 
 
 
-<!--BEGIN ROW 5-->
-	<div class="row">
-		<!--TABLE FOR ITEMS IN CART-->
-		<table id="cart_table">
-			<thead>
-				<tr>
-					<th>Item</th>
-					<th>Price</th>
-					<th>Qty</th>
-				</tr>
-			</thead>
-			<tbody>
-			 <!--INSERT TR AND TD BASED OFF CART ARRAY...USE innerHTML? or better document.body.table.createElement and createTextNode -> type out html for items and give to variable as value... MUAHAHA forget all this, use .insertRow and .insertCell!!!!! -->
-			</tbody>
-			<tfoot>
-				<tr>
-					<th colspan="2">Subtotal: </th>
-					<td></td>
-				</tr>
-				<tr>
-					<th colspan="2">Tax: </th>
-					<td></td>
-				</tr>
-				<tr>
-					<th colspan="2">Total: </th>
-					<td id="total_cell"></td>
-				</tr>
-			</tfoot>
-		</table>
-	</div>
-<!--END ROW 5-->
 
-<!--BEGIN ROW 6-->
-	
-	<div class="row show_and_total">
-		<!--SHOW CART & TOTAL CART-->
-		<div class="col-md-12 show_cart_button">
-			<button type="button" class="btn btn-primary showCart" onclick="totalCart(cart)">Total Items' Cost</button>
-		</div>
-	</div>
 
 
 

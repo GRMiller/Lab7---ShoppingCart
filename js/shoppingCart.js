@@ -28,23 +28,34 @@ var Item = function (name, cost, qty) {				//CREATE CONSTRUCTOR OBJECT
 
 function addItemToCart(name, cost, qty) { 	//NAME FUNCTION AND PARAMETER
 
-	for (var i in cart) { 				//LOOP THROUGH PROPERTIES OF OBJECTS IN CART
+	for (var i = 0; i < cart.length; i++) { 	//LOOP THROUGH PROPERTIES OF OBJECTS IN CART
 		
 		if (cart[i].name === name) {	//TO CHECK FOR DUPLICATE ITEMS
 			cart[i].qty += qty;			//INCREASE QTY
-			cart[i].cost += cost;								//FIX THIS LINE, USE SUBTOTALS
+		//	qtyCell.innerHTML = car
+			cart[i].cost += cost;		//FIX THIS LINE, USE SUBTOTALS
 			return; 					//STOP LOOP AND ACT
 		}								//END FUNCTION when IF = TRUE
 	}									//END LOOP
 
 	var item = new Item (name, cost, qty); //DECLARE NEW OBJECT IF NOT DUPLICATE
 	cart.push(item);					//AND PUSH NEW ITEM INTO CART 
-										//ADD ITEMS INTO TABLE on PAGE
-	var table = document.getElementById('cart_table');
-	var row = table.insertRow(1);
-	var nameCell = row.insertCell(0);
+	
+
+	var table = document.getElementById('cart_table');   //GET ALL PROPERTIES OF ITEM TO REPLACE
+	var row = table.insertRow(1);		// CREATE NEW ROW AND CELLS FOR NEW CART ITEM
+	var nameCell = row.insertCell(0);	
 	var costCell = row.insertCell(1);
 	var qtyCell = row.insertCell(2);
+
+	// for (var i = 0; i<cart.length; i++) {
+	// 	if (cart[i].name ===name) {
+	// 		costcell.innerHTML = cart[i].cost += cost;
+	// 		qtyCell.innerHTML = cart[i].qty += qty;
+	// 		return;
+	// 	}
+	// }									//ADD ITEMS INTO TABLE on PAGE
+	
 	nameCell.innerHTML = cart[i].name;
 	costCell.innerHTML = cart[i].cost;
 	qtyCell.innerHTML = cart[i].qty;
@@ -74,7 +85,7 @@ function totalCart () {
 	}
 
 	var eltotal_cell = document.getElementById('total_cell');
-	eltotal_cell.innerHTML(totalCartCost);
+	eltotal_cell.innerHTML = totalCartCost;
 
 	// + totalCartCost.toFixed(2) + ". Thank you for shopping with us. Refresh to go back to item menu and add your items in again.")
 	return totalCartCost;
