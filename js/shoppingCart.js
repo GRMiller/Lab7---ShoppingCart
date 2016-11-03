@@ -23,82 +23,60 @@ var Item = function (name, cost, qty) {				//CREATE CONSTRUCTOR OBJECT
 	}
 };
 
-			//TEST
-			// var Apple = new Item('Apple', 2.00, 1);
-			// cart.push(Apple);
-			// Apple.subtotal();
-			// var Avocado = new Item('Avocado', 1.50, 1);
-			// cart.push(Avocado);
-
-			// console.log(Apple);
-			// console.log(Apple.totalCost());
-
-
 
 //ADD ITEMS TO CART
 
 function addItemToCart(name, cost, qty) { 	//NAME FUNCTION AND PARAMETER
 
-	for (var i in cart) { 				//LOOP THROUGH CART
+	for (var i in cart) { 				//LOOP THROUGH PROPERTIES OF OBJECTS IN CART
 		
 		if (cart[i].name === name) {	//TO CHECK FOR DUPLICATE ITEMS
 			cart[i].qty += qty;			//INCREASE QTY
-			cart[i].cost += cost;								//FIX THIS LINE
+			cart[i].cost += cost;								//FIX THIS LINE, USE SUBTOTALS
 			return; 					//STOP LOOP AND ACT
 		}								//END FUNCTION when IF = TRUE
 	}									//END LOOP
 
 	var item = new Item (name, cost, qty); //DECLARE NEW OBJECT IF NOT DUPLICATE
-	cart.push(item);						//AND PUSH NEW ITEM INTO CART 
+	cart.push(item);					//AND PUSH NEW ITEM INTO CART 
+										//ADD ITEMS INTO TABLE on PAGE
+	var table = document.getElementById('cart_table');
+	var row = table.insertRow(1);
+	var nameCell = row.insertCell(0);
+	var costCell = row.insertCell(1);
+	var qtyCell = row.insertCell(2);
+	nameCell.innerHTML = cart[i].name;
+	costCell.innerHTML = cart[i].cost;
+	qtyCell.innerHTML = cart[i].qty;
 }; 
 
 
 
-
-	//TEST
-	// addItemToCart('Apple', 1.05, 1);
-	// addItemToCart('Avocado', 1.50, 1);
-	// addItemToCart('Broccoli',1.80, 1);
-	// addItemToCart('Milk',4.75,1);
-	// addItemToCart('Eggs',1.75,12);
-	// addItemToCart('Avocado', 1.50, 1);
-	// addItemToCart ('Avocado', 3.00, 2)
-
-	// //TEST
-	// console.log ("Your " + 
-	// 	cart[1].qty + 
-	// 	" " + 
-	// 	cart[1].name + 
-	// 	" will cost $" + 
-	// 	cart[1].cost + 
-	// 	". Thanks for shopping with us!"); 
-		
-	// console.log(cart);
-			
-			//subtotal, totalTax, totalCost IS BROKEN
-
-
 //LOOP THROUGH CART TO PRINT NAME, PRICE, QTY INTO TABLE
 
-function showCart () {
-	for (var i in cart) {
-		document.write ( "Your " + cart[i].qty + " " + cart[i].name + " will cost you $" + (cart[i].cost).toFixed(2) + " ")
-	}
+// function showCart () {
+// 	var table = document.getElementById('cart_table');
+// 	for (var i in cart) {
+// 		document.write ( "Your " + cart[i].qty + " " + cart[i].name + " will cost you $" + (cart[i].cost).toFixed(2) + " ")
+// 	}
 
-	return;
-};
+// 	return;
+// };
 
 
 
 function totalCart () {
 
 	var totalCartCost = 0;
-
+	
 	for (var i in cart) {
 		totalCartCost += cart[i].cost;	
 	}
 
-	document.write("Your Total Cost is $" + totalCartCost.toFixed(2) + ". Thank you for shopping with us. Refresh to go back to item menu and add your items in again.")
+	var eltotal_cell = document.getElementById('total_cell');
+	eltotal_cell.innerHTML(totalCartCost);
+
+	// + totalCartCost.toFixed(2) + ". Thank you for shopping with us. Refresh to go back to item menu and add your items in again.")
 	return totalCartCost;
 
 };

@@ -34,8 +34,8 @@ h1 {
 
 .product_item:hover {
 	padding:5px 0px;
-	box-shadow: 12px 0 15px -4px rgba(80, 81, 81, 0.8), 
-				-12px 0 8px -4px rgba(80, 81, 81, 0.8),
+	box-shadow: 12px 0px 15px -4px rgba(80, 81, 81, 0.8), 
+				-12px 0px 8px -4px rgba(80, 81, 81, 0.8),
 				0 9px 0px 0px white, 
 				0 -9px 0px 0px white; 
 				
@@ -57,3 +57,44 @@ button {margin:20px auto;
 .show_and_total {
 	padding:75px auto;
 }
+
+table {
+	/*border:2px solid black;*/
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px 5px #ccc,
+				-2px -2px 5px 5px #ccc;
+	width: 30%;
+	margin:30px auto;
+	padding:5px 5px;
+}
+
+table thead {
+	text-align:center;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
