@@ -26,12 +26,22 @@
 
 <body>
 <div class="container-fluid">
-	
-	<div class="col-md-12 grocery_shopping">
-		<h1>Grocery Shopping</h1>
-	</div>
 
-<!--BEGIN ROW 5-->
+
+
+
+<!--BEGIN ROW 1-->
+	<div class="row">
+		<div class="col-md-12 grocery_shopping">
+			<h1>Shopping List</h1>
+		</div>
+	</div>
+<!--END ROW 1-->
+
+
+
+
+<!--BEGIN ROW 2-->
 	<div class="row">
 		<!--TABLE FOR ITEMS IN CART-->
 		<table id="cart_table">
@@ -61,7 +71,21 @@
 			</tfoot>
 		</table>
 	</div>
-<!--END ROW 5-->
+<!--END ROW 2-->
+
+<!--BEGIN ROW 3-->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="user_inuput">
+				<h3>FLO'S NAME YOUR PRICE TOOL<sub>copyright infringement</sub></h3>
+				<input id="itemName" type="text" placehoder="Enter any item that you'd like to buy" /> 
+				<input id="itemPrice" type="text" placeholder="Enter the price you want to pay" />
+				<input id="itemQty" type="text" placeholder="Enter your qty" />
+			</div>
+			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart(document.getElementById('itemName').value, Number(document.getElementById('itemPrice').value), Number(document.getElementById('itemQty').value))">Add to Cart
+			</button>
+		</div>
+	</div>
 
 <!--BEGIN ROW 6-->
 	
@@ -79,28 +103,28 @@
 		<!--APPLES-->
 		<div class="col-md-3 product_item"> 
 			<h3>Apples</h3>
-			<img src="images/apple.png" alt="Red Delicious Apple" title="Red Delicious Apple" class="img-responsive" id="apple_img" />
+				<img src="images/apple.png" alt="Red Delicious Apple" title="Red Delicious Apple" class="img-responsive" id="apple_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Apple', 1.05, 1)">Add to Cart</button>
 		</div>
 
 		<!--AVOCADOS-->
 		<div class="col-md-3 product_item"> 
 			<h3>Avocados</h3>
-			<img src="images/avocado.png" alt="An Avocado" title="MMMmmm, Avocados" class="img-responsive" id="avocado_img" />
+				<img src="images/avocado.png" alt="An Avocado" title="MMMmmm, Avocados" class="img-responsive" id="avocado_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Avocado', 1.33, 1)">Add to Cart</button>
 		</div>
 
 		<!--BROCCOLI-->
 		<div class="col-md-3 product_item"> 
 			<h3>Broccoli</h3>
-			<img src="images/broccoli.png" alt="A head of Broccoli" title="Broccoli" class="img-responsive" id="broccoli_img" />
+				<img src="images/broccoli.png" alt="A head of Broccoli" title="Broccoli" class="img-responsive" id="broccoli_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Broccoli', 1.80, 1)">Add to Cart</button>
 		</div>
 
 		<!--TOMATO-->
 		<div class="col-md-3 product_item">
 			<h3>Tomatoes</h3>
-			<img src="images/tomato.png" alt="Tomato" title="Tomato" class="img-responsive" id="tomato_img" />
+				<img src="images/tomato.png" alt="Tomato" title="Tomato" class="img-responsive" id="tomato_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Tomato', 1.00, 1)">Add to Cart</button>
 		</div>
 	</div>
@@ -114,28 +138,28 @@
 	<!--POTATOES-->
 		<div class="col-md-3 product_item"> 
 			<h3>Red Potatoes</h3>
-			<img src="images/red_potato.png" alt="Red Potatoes" title="Red Potatoes" class="img-responsive" id="red_potato_img" />
+				<img src="images/red_potato.png" alt="Red Potatoes" title="Red Potatoes" class="img-responsive" id="red_potato_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Red Potato', 0.45, 1)">Add to Cart</button>
 		</div>
 
 		<!--ONION-->
 		<div class="col-md-3 product_item"> 
 			<h3>Red Onion</h3>
-			<img src="images/red_onion.png" alt="A Red Onion" title="Red Onion" class="img-responsive" id="red_onion_img" />
+				<img src="images/red_onion.png" alt="A Red Onion" title="Red Onion" class="img-responsive" id="red_onion_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Red Onion', 0.35 , 1)">Add to Cart</button>
 		</div>
 
 		<!--BROCCOLI-->
 		<div class="col-md-3 product_item"> 
 			<h3>Orange</h3>
-			<img src="images/orange.png" alt="An orange" title="Orange" class="img-responsive" id="orange_img" />
+				<img src="images/orange.png" alt="An orange" title="Orange" class="img-responsive" id="orange_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Orange', 1.75, 1)">Add to Cart</button>
 		</div>
 
 		<!--TOMATO-->
 		<div class="col-md-3 product_item">
 			<h3>Bread Loaf</h3>
-			<img src="images/bread.png" alt="Loaf of Bread" title="Loaf of Bread" class="img-responsive" id="bread_img" />
+				<img src="images/bread.png" alt="Loaf of Bread" title="Loaf of Bread" class="img-responsive" id="bread_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bread Loaf', 3.99, 1)">Add to Cart</button>
 		</div>
 	</div>
@@ -148,28 +172,28 @@
 		<!--PITA BREAD-->
 		<div class="col-md-3 product_item">
 			<h3>Pita Bread</h3>
-			<img src="images/pita_bread.png" alt="Pita Bread" title="Pita Bread" class="img-responsive" id="pita_bread_img" />
+				<img src="images/pita_bread.png" alt="Pita Bread" title="Pita Bread" class="img-responsive" id="pita_bread_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Pita Bread', 4.99, 1)">Add to Cart</button>
 		</div>
 
 		<!--MILK-->
 		<div class="col-md-3 product_item"> 
 			<h3>Gallon of Milk</h3>
-			<img src="images/milk.png" alt="Milk" title="Milk" class="img-responsive" id="milk_img" />
+				<img src="images/milk.png" alt="Milk" title="Milk" class="img-responsive" id="milk_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Milk', 2.50, 1)">Add to Cart</button>
 		</div>
 
 		<!--EGGS-->
 		<div class="col-md-3 product_item"> 
 			<h3>A Dozen Eggs</h3>
-			<img src="images/egg_carton.png" alt="Carton of Eggs" title="Carton of Eggs" class="img-responsive" id="egg_carton_img" />
+				<img src="images/egg_carton.png" alt="Carton of Eggs" title="Carton of Eggs" class="img-responsive" id="egg_carton_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Carton of Eggs', 1.99 , 1)">Add to Cart</button>
 		</div>
 
 		<!--BACON-->
 		<div class="col-md-3 product_item"> 
 			<h3>Bacon</h3>
-			<img src="images/bacon.png" alt="Bacon" title="Bacon" class="img-responsive" id="bacon_img" />
+				<img src="images/bacon.png" alt="Bacon" title="Bacon" class="img-responsive" id="bacon_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bacon', 4.99, 1)">Add to Cart</button>
 		</div>
 	</div>
@@ -183,28 +207,28 @@
 		<!--PITA BREAD-->
 		<div class="col-md-3 product_item">
 			<h3>6 pack of Beer</h3>
-			<img src="images/beer_6pack.png" alt="6 pack of Beer" title="6 pack of Beer" class="img-responsive" id="beer_6pack_img" />
+				<img src="images/beer_6pack.png" alt="6 pack of Beer" title="6 pack of Beer" class="img-responsive" id="beer_6pack_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('6 pack of Beer', 7.99, 1)">Add to Cart</button>
 		</div>
 
 		<!--BEER KEG-->
 		<div class="col-md-3 product_item"> 
 			<h3>Keg of Beer</h3>
-			<img src="images/beer_keg.png" alt="Beer Keg" title="Beer Keg" class="img-responsive" id="beer_keg_img" />
+				<img src="images/beer_keg.png" alt="Beer Keg" title="Beer Keg" class="img-responsive" id="beer_keg_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Keg of Beer', 45, 1)">Add to Cart</button>
 		</div>
 
 		<!--RED RED WII-III-IINE-->
 		<div class="col-md-3 product_item"> 
 			<h3>Bottle of Red Wine</h3>
-			<img src="images/wine.png" alt="Bottle of Red Wine" title="Bottle of Red Wine" class="img-responsive" id="wine_img" />
+				<img src="images/wine.png" alt="Bottle of Red Wine" title="Bottle of Red Wine" class="img-responsive" id="wine_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bottle of Red Wine', 11.99 , 1)">Add to Cart</button>
 		</div>
 
 		<!--BULLEIT BOURBON-->
 		<div class="col-md-3 product_item"> 
 			<h3>Bulleit Rye Bourbon</h3>
-			<img src="images/bulleit_rye.png" alt="Fifth of Bulleit Rye Bourbon" title="Fifth of Bulleit Rye Bourbon" class="img-responsive" id="bulleit_rye_img" />
+				<img src="images/bulleit_rye.png" alt="Fifth of Bulleit Rye Bourbon" title="Fifth of Bulleit Rye Bourbon" class="img-responsive" id="bulleit_rye_img" />
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bulleit Rye Bourbon', 24.99, 1)">Add to Cart</button>
 		</div>
 	</div>
@@ -214,71 +238,10 @@
 
 
 
+</div> <!--END container-fluid-->
 
 
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<script src="js/shoppingCart.js">
-
-		
-	</script>
-
-
+<script src="js/shoppingCart.js">	</script>
 
 
 </body>
