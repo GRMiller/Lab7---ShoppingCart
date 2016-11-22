@@ -13,7 +13,7 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	
+
 
 	<!--INSERT FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -25,214 +25,207 @@
 </head>
 
 <body>
+
+	<!--TABLE FOR ITEMS IN CART-->
+	<table id="cart_table">
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Price</th>
+				<th>Qty</th>
+			</tr>
+		</thead>
+		<tbody id="table_body">
+		 <!--INSERT DATA FROM ADD TO CART FUNCTION-->
+		</tbody>
+		<tfoot>
+			<tr>
+				<th colspan="2">Subtotal: </th>
+				<td id="subtotal_cell"></td>
+			</tr>
+			<tr>
+				<th colspan="2">Tax: </th>
+				<td id="totalTax_cell"></td>
+			</tr>
+			<tr>
+				<th colspan="2">Total: </th>
+				<td id="total_cell"></td>
+			</tr>
+		</tfoot>
+	</table>
+
 <div class="container-fluid">
-
-
-
 
 <!--BEGIN ROW 1-->
 	<div class="row">
-		<div class="col-md-12 grocery_shopping">
-			<h1>Shopping List</h1>
+		<div class="col-sm-12 grocery_shopping">
+			<h1>Shopping Cart</h1>
 		</div>
 	</div>
 <!--END ROW 1-->
 
 
-
-
-<!--BEGIN ROW 2-->
-	<div class="row">
-		<!--TABLE FOR ITEMS IN CART-->
-		<table id="cart_table">
-			<thead>
-				<tr>
-					<th>Item</th>
-					<th>Price</th>
-					<th>Qty</th>
-				</tr>
-			</thead>
-			<tbody>
-			 <!--INSERT DATA FROM ADD TO CART FUNCTION-->
-			</tbody>
-			<tfoot>
-				<tr>
-					<th colspan="2">Subtotal: </th>
-					<td></td>
-				</tr>
-				<tr>
-					<th colspan="2">Tax: </th>
-					<td></td>
-				</tr>
-				<tr>
-					<th colspan="2">Total: </th>
-					<td id="total_cell"></td>
-				</tr>
-			</tfoot>
-		</table>
-	</div>
-<!--END ROW 2-->
-
 <!--BEGIN ROW 3-->
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-md-12">
 			<div class="user_inuput">
 				<h3>FLO'S NAME YOUR PRICE TOOL<sub>copyright infringement</sub></h3>
-				<input id="itemName" type="text" placehoder="Enter any item that you'd like to buy" /> 
+				<input id="itemName" type="text" placehoder="Enter any item that you'd like to buy" />
 				<input id="itemPrice" type="text" placeholder="Enter the price you want to pay" />
 				<input id="itemQty" type="text" placeholder="Enter your qty" />
 			</div>
 			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart(document.getElementById('itemName').value, Number(document.getElementById('itemPrice').value), Number(document.getElementById('itemQty').value))">Add to Cart
 			</button>
 		</div>
-	</div>
+	</div> -->
 
-<!--BEGIN ROW 6-->
-	
+<!--BEGIN ROW 4-->
+
 	<div class="row show_and_total">
 		<!--SHOW CART & TOTAL CART-->
-		<div class="col-md-12 show_cart_button">
+		<div class="col-sm-12 show_cart_button">
 			<button type="button" class="btn btn-primary showCart" onclick="totalCart(cart)">Total Items' Cost</button>
 		</div>
 	</div>
 
 
-<!--BEGIN ROW 1-->
+<!--BEGIN ROW 5-->
 	<div class="row">
 
 		<!--APPLES-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Apples</h3>
-				<img src="images/apple.png" alt="Red Delicious Apple" title="Red Delicious Apple" class="img-responsive" id="apple_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Apple', 1.05, 1)">Add to Cart</button>
+				<img src="images/apple.png" alt="Red Delicious Apple" title="Red Delicious Apple" class="img-responsive"
+				id="product" data-name="Apple" data-cost="1.05" data-qty="1"/>
 		</div>
 
 		<!--AVOCADOS-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Avocados</h3>
-				<img src="images/avocado.png" alt="An Avocado" title="MMMmmm, Avocados" class="img-responsive" id="avocado_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Avocado', 1.33, 1)">Add to Cart</button>
+				<img src="images/avocado.png" alt="An Avocado" title="MMMmmm, Avocados" class="img-responsive"
+				id="product" data-name="Avocado" data-cost="1.35" data-qty="1"/>
 		</div>
 
 		<!--BROCCOLI-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Broccoli</h3>
-				<img src="images/broccoli.png" alt="A head of Broccoli" title="Broccoli" class="img-responsive" id="broccoli_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Broccoli', 1.80, 1)">Add to Cart</button>
+				<img src="images/broccoli.png" alt="A head of Broccoli" title="Broccoli" class="img-responsive"
+				id="product" data-name="Broccoli" data-cost="1.80" data-qty="1"/>
 		</div>
 
 		<!--TOMATO-->
-		<div class="col-md-3 product_item">
+		<div class="col-sm-3 product_item">
 			<h3>Tomatoes</h3>
-				<img src="images/tomato.png" alt="Tomato" title="Tomato" class="img-responsive" id="tomato_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Tomato', 1.00, 1)">Add to Cart</button>
+				<img src="images/tomato.png" alt="Tomato" title="Tomato" class="img-responsive"
+				id="product" data-name="Tomato" data-cost="1.00" data-qty="1"/>
 		</div>
 	</div>
-<!--END ROW 1-->
+<!--END ROW 5-->
 
 
 
 
-<!--BEGIN ROW 2-->
+<!--BEGIN ROW 6-->
 	<div class="row">
 	<!--POTATOES-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Red Potatoes</h3>
-				<img src="images/red_potato.png" alt="Red Potatoes" title="Red Potatoes" class="img-responsive" id="red_potato_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Red Potato', 0.45, 1)">Add to Cart</button>
+				<img src="images/red_potato.png" alt="Red Potatoes" title="Red Potatoes" class="img-responsive"
+				id="product" data-name="Red Potato" data-cost="0.45" data-qty="1"/>
 		</div>
 
 		<!--ONION-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Red Onion</h3>
-				<img src="images/red_onion.png" alt="A Red Onion" title="Red Onion" class="img-responsive" id="red_onion_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Red Onion', 0.35 , 1)">Add to Cart</button>
+				<img src="images/red_onion.png" alt="A Red Onion" title="Red Onion" class="img-responsive"
+				id="product" data-name="Red Onion" data-cost="0.35" data-qty="1"/>
 		</div>
 
 		<!--BROCCOLI-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Orange</h3>
-				<img src="images/orange.png" alt="An orange" title="Orange" class="img-responsive" id="orange_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Orange', 1.75, 1)">Add to Cart</button>
+				<img src="images/orange.png" alt="An orange" title="Orange" class="img-responsive"
+				id="product" data-name="Orange" data-cost="1.75" data-qty="1"/>
 		</div>
 
 		<!--TOMATO-->
-		<div class="col-md-3 product_item">
+		<div class="col-sm-3 product_item">
 			<h3>Bread Loaf</h3>
-				<img src="images/bread.png" alt="Loaf of Bread" title="Loaf of Bread" class="img-responsive" id="bread_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bread Loaf', 3.99, 1)">Add to Cart</button>
+				<img src="images/bread.png" alt="Loaf of Bread" title="Loaf of Bread" class="img-responsive"
+				id="product" data-name="Bread Loaf" data-cost="3.99" data-qty="1"/>
 		</div>
 	</div>
-<!--END ROW 2-->
+<!--END ROW 6-->
 
 
 
-<!--BEGIN ROW 3-->
+<!--BEGIN ROW 7-->
 	<div class="row">
 		<!--PITA BREAD-->
-		<div class="col-md-3 product_item">
+		<div class="col-sm-3 product_item">
 			<h3>Pita Bread</h3>
-				<img src="images/pita_bread.png" alt="Pita Bread" title="Pita Bread" class="img-responsive" id="pita_bread_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Pita Bread', 4.99, 1)">Add to Cart</button>
+				<img src="images/pita_bread.png" alt="Pita Bread" title="Pita Bread" class="img-responsive"
+				id="product" data-name="Pita Bread" data-cost="4.99" data-qty="1"/>
+
 		</div>
 
 		<!--MILK-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Gallon of Milk</h3>
-				<img src="images/milk.png" alt="Milk" title="Milk" class="img-responsive" id="milk_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Milk', 2.50, 1)">Add to Cart</button>
+				<img src="images/milk.png" alt="Milk" title="Milk" class="img-responsive"
+				id="product" data-name="Milk" data-cost="2.50" data-qty="1"/>
 		</div>
 
 		<!--EGGS-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>A Dozen Eggs</h3>
-				<img src="images/egg_carton.png" alt="Carton of Eggs" title="Carton of Eggs" class="img-responsive" id="egg_carton_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Carton of Eggs', 1.99 , 1)">Add to Cart</button>
+				<img src="images/egg_carton.png" alt="Carton of Eggs" title="Carton of Eggs" class="img-responsive"
+				id="product" data-name="Carton of Eggs" data-cost="1.95" data-qty="1"/>
 		</div>
 
 		<!--BACON-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Bacon</h3>
-				<img src="images/bacon.png" alt="Bacon" title="Bacon" class="img-responsive" id="bacon_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bacon', 4.99, 1)">Add to Cart</button>
+				<img src="images/bacon.png" alt="Bacon" title="Bacon" class="img-responsive"
+				id="product" data-name="Bacon" data-cost="4.99" data-qty="1"/>
 		</div>
 	</div>
-<!--END ROW 3-->
+<!--END ROW 7-->
 
 
 
 
-<!--BEGIN ROW 4-->
+<!--BEGIN ROW 8-->
 	<div class="row">
 		<!--PITA BREAD-->
-		<div class="col-md-3 product_item">
+		<div class="col-sm-3 product_item">
 			<h3>6 pack of Beer</h3>
-				<img src="images/beer_6pack.png" alt="6 pack of Beer" title="6 pack of Beer" class="img-responsive" id="beer_6pack_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('6 pack of Beer', 7.99, 1)">Add to Cart</button>
+				<img src="images/beer_6pack.png" alt="6 pack of Beer" title="6 pack of Beer" class="img-responsive"
+				id="product" data-name="6 pack of Beer" data-cost="7.99" data-qty="1"/>
 		</div>
 
 		<!--BEER KEG-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Keg of Beer</h3>
-				<img src="images/beer_keg.png" alt="Beer Keg" title="Beer Keg" class="img-responsive" id="beer_keg_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Keg of Beer', 45, 1)">Add to Cart</button>
+				<img src="images/beer_keg.png" alt="Beer Keg" title="Beer Keg" class="img-responsive"
+				id="product" data-name="This was a mistake" data-cost="45.00" data-qty="1"/>
 		</div>
 
 		<!--RED RED WII-III-IINE-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Bottle of Red Wine</h3>
-				<img src="images/wine.png" alt="Bottle of Red Wine" title="Bottle of Red Wine" class="img-responsive" id="wine_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bottle of Red Wine', 11.99 , 1)">Add to Cart</button>
+				<img src="images/wine.png" alt="Bottle of Red Wine" title="Bottle of Red Wine" class="img-responsive"
+				id="product" data-name="Bottle of Red Wine" data-cost="11.99" data-qty="1" />
 		</div>
 
 		<!--BULLEIT BOURBON-->
-		<div class="col-md-3 product_item"> 
+		<div class="col-sm-3 product_item">
 			<h3>Bulleit Rye Bourbon</h3>
-				<img src="images/bulleit_rye.png" alt="Fifth of Bulleit Rye Bourbon" title="Fifth of Bulleit Rye Bourbon" class="img-responsive" id="bulleit_rye_img" />
-			<button type="button" class="btn btn-primary add_to_cart" onclick="addItemToCart('Bulleit Rye Bourbon', 24.99, 1)">Add to Cart</button>
+				<img src="images/bulleit_rye.png" alt="Fifth of Bulleit Rye Bourbon" title="Fifth of Bulleit Rye Bourbon" class="img-responsive"
+				id="product" data-name="Bulleit Rye Bourbon" data-cost="24.99" data-qty="1"/>
 		</div>
 	</div>
-<!--END ROW 4-->
+<!--END ROW 8-->
 
 
 

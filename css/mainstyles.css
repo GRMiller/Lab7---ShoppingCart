@@ -32,12 +32,12 @@ h1 {
 	padding: 5px 15px;
 }
 
-.product_item:hover {
+.product_item:hover img {
 	padding:5px 0px;
-	box-shadow: 12px 0px 15px -4px rgba(80, 81, 81, 0.8), 
+	box-shadow: 12px 0px 15px -4px rgba(80, 81, 81, 0.8),
 				-12px 0px 8px -4px rgba(80, 81, 81, 0.8),
-				0 9px 8px -4px rgba(80, 81, 81, .8), 
-				0 -9px 0px 0px white; 
+				0 9px 8px -4px rgba(80, 81, 81, .8),
+				0 -9px 0px 0px white;
 
 }
 
@@ -74,29 +74,3 @@ table thead {
 	/*text-align:center;*/
 	text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
